@@ -217,3 +217,4 @@ pip install -r requirements.txt
 ---
 
 **Built with ❤️ using free and open-source tools for global disaster response.**# ReDAC-Real-Time-Disaster-Aid-Coordinator
+# ReDAC-Real-Time-Disaster-Aid-Coordinator
