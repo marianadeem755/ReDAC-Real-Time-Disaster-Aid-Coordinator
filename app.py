@@ -21,7 +21,23 @@ if st.sidebar.button("🔔Trigger Discord Alert"):
                     st.error("❌ Discord webhook not configured.")
     else:
         st.sidebar.error("Please enter your location first.")
+# NEW: Discord Server Instructions in Sidebar
+st.sidebar.divider()
+st.sidebar.header("🔗 Join Our Discord Server")
+st.sidebar.markdown("""
+To receive real-time alerts and interact with the CrisisPilot community:
 
+1. Click the invite link below:
+   👉 [Join CrisisPilot Discord Server](https://discord.gg/your-invite-code)
+
+2. Log in to your Discord account (if not already).
+
+3. Accept the invitation and you'll be added to the server.
+
+4. Navigate to the **#alerts** or **#general** channel to see updates.
+
+> 🔒 **Note**: If the invite expires or you get an error, contact the project maintainer for a new link.
+""")
 # Discord Server Invitation Section
 st.sidebar.divider()
 st.sidebar.header("🔗 Join Our Discord Server")
