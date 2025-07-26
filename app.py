@@ -232,7 +232,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Sidebar
+# Sidebar - Complete section with Discord integration
 st.sidebar.header("🔮 System Portal")
 user_location = st.sidebar.text_input(
     "📍Enter Your Location Here:", 
@@ -255,6 +255,329 @@ if st.sidebar.button("🔔Trigger Discord Alert"):
                     st.error("❌ Discord webhook not configured.")
     else:
         st.sidebar.error("Please enter your location first.")
+
+# Enhanced Discord Server Integration Section
+st.sidebar.divider()
+st.sidebar.header("🔗 Join Our Discord Server")
+
+# Discord server invitation section with enhanced styling
+st.sidebar.markdown("""
+<div style="background: rgba(88, 101, 242, 0.15); padding: 15px; border-radius: 15px; margin: 10px 0; border: 2px solid rgba(88, 101, 242, 0.3);">
+    <h4 style="color: #000000 !important; text-align: center; margin-bottom: 15px; font-weight: bold; text-shadow: none;">💬 CrisisPilot Community</h4>
+    <p style="color: #000000 !important; text-shadow: none; font-size: 14px; line-height: 1.4; margin: 0;">
+        🚨 Get real-time alerts<br>
+        💬 Connect with the community<br>
+        🛡️ Share safety tips<br>
+        📊 Access exclusive updates
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
+# Enhanced instructions with better visibility
+st.sidebar.markdown("""
+<div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px; margin: 10px 0; border: 1px solid rgba(0, 0, 0, 0.1);">
+<p style="color: #000000 !important; font-weight: bold; margin-bottom: 10px; text-shadow: none;">To join and receive alerts:</p>
+
+<ol style="color: #000000 !important; text-shadow: none; padding-left: 20px;">
+<li><strong>Click the invite link below</strong> 👇</li>
+<li><strong>Log in</strong> to your Discord account</li>
+<li><strong>Accept</strong> the server invitation</li>
+<li><strong>Navigate</strong> to #alerts channel for updates</li>
+<li><strong>Enable</strong> notifications for real-time alerts</li>
+</ol>
+
+<p style="color: #000000 !important; font-weight: bold; margin: 15px 0 10px 0; text-shadow: none;">Channels you'll find:</p>
+<ul style="color: #000000 !important; text-shadow: none; padding-left: 20px;">
+<li>🚨 <strong>#alerts</strong> - Emergency notifications</li>
+<li>💬 <strong>#general</strong> - Community discussions</li>
+<li>🛡️ <strong>#safety-tips</strong> - Preparedness advice</li>
+<li>📊 <strong>#updates</strong> - System announcements</li>
+</ul>
+</div>
+""", unsafe_allow_html=True)
+
+# Discord invite button with enhanced styling
+st.sidebar.markdown("""
+<div style="text-align: center; margin: 20px 0;">
+    <a href="https://discord.gg/uHMmJ9T9hz" 
+       style="display: inline-block; 
+              background: linear-gradient(45deg, #aab3ff, #c0ccff);
+              color: white !important; 
+              padding: 12px 20px; 
+              text-decoration: none; 
+              border-radius: 25px; 
+              font-weight: bold; 
+              font-size: 18px;
+              box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+              transition: all 0.3s ease;"
+       onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(88, 101, 242, 0.4)'"
+       onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 4px 15px rgba(88, 101, 242, 0.3)'"
+       target="_blank">
+        🎮 Join CrisisPilot Discord Server
+    </a>
+</div>
+""", unsafe_allow_html=True)
+
+# Enhanced Discord community status badge
+st.sidebar.markdown("""
+<div style="background: linear-gradient(45deg, #5865f2, #7289da); 
+           color: white; 
+           padding: 10px; 
+           text-align: center; 
+           border-radius: 20px; 
+           margin: 15px 0;
+           font-weight: bold;
+           box-shadow: 0 2px 8px rgba(88, 101, 242, 0.3);">
+    💬 CrisisPilot Community Ready
+</div>
+""", unsafe_allow_html=True)
+
+# Additional Discord information with better styling
+st.sidebar.markdown("""
+<div style="background: rgba(88, 101, 242, 0.1); 
+           padding: 15px; 
+           border-radius: 10px; 
+           margin: 15px 0; 
+           border: 1px solid rgba(88, 101, 242, 0.2);">
+    <p style="color: #000000 !important; 
+              font-size: 12px; 
+              text-shadow: none; 
+              margin: 0;
+              line-height: 1.4;">
+        <strong>💡 Pro Tip:</strong> Enable Discord notifications on your mobile device to receive instant emergency alerts wherever you are!
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
+# Important: Replace the Discord invite URL
+st.sidebar.markdown("""
+<div style="background: rgba(255, 193, 7, 0.15); 
+           padding: 10px; 
+           border-radius: 8px; 
+           margin: 10px 0; 
+           border-left: 4px solid #ffc107;">
+    <p style="color: #000000 !important; 
+              font-size: 11px; 
+              text-shadow: none; 
+              margin: 0;">
+        <strong>⚠️ Note:</strong> Replace "your-invite-code" with your actual Discord server invite code.
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
+# Add this CSS to your existing style section to ensure sidebar text visibility
+# Replace your existing CSS section (around lines 30-300) with this improved version:
+
+st.markdown("""
+<style>
+    /* Main app background with gradient */
+    .stApp {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+    }
+    
+    /* Animated gradient keyframes */
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    
+    /* Main content container with semi-transparent background */
+    .main .block-container {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem;
+        margin-top: 1rem;
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    
+    /* Sidebar styling with gradient background */
+    .css-1d391kg, .css-1cypcdb, .sidebar .sidebar-content, section[data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%) !important;
+        backdrop-filter: blur(10px);
+        border-radius: 0 20px 20px 0;
+        border-right: 2px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    /* FIXED: Sidebar text styling for better readability */
+    .sidebar .sidebar-content, 
+    section[data-testid="stSidebar"], 
+    section[data-testid="stSidebar"] * {
+        color: #000000 !important;
+    }
+    
+    /* FIXED: Ensure all sidebar text elements are visible */
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3,
+    section[data-testid="stSidebar"] h4,
+    section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] li,
+    section[data-testid="stSidebar"] ol,
+    section[data-testid="stSidebar"] ul,
+    section[data-testid="stSidebar"] span,
+    section[data-testid="stSidebar"] div {
+        color: #000000 !important;
+        text-shadow: none !important;
+    }
+    
+    /* FIXED: Sidebar links visibility */
+    section[data-testid="stSidebar"] a {
+        color: #0066cc !important;
+        text-decoration: underline !important;
+        font-weight: bold !important;
+    }
+    
+    /* Make buttons more vibrant */
+    .stButton > button {
+        background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4) !important;
+        background-size: 300% 300%;
+        animation: gradientShift 3s ease infinite;
+        color: white !important;
+        border: none !important;
+        border-radius: 25px !important;
+        padding: 12px 24px !important;
+        font-weight: bold !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .stButton > button:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3) !important;
+    }
+    
+    /* FIXED: Enhanced main title with better color contrast */
+    .main-title {
+        background: rgba(0, 0, 0, 0.7) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        border: 2px solid rgba(255, 255, 255, 0.3) !important;
+        padding: 30px !important;
+        border-radius: 20px !important;
+        color: #ffffff !important;
+        text-align: center !important;
+        margin-bottom: 30px !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+    }
+    
+    /* FIXED: Make sure title text is always visible */
+    .main-title h1 {
+        color: #ffffff !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+        font-size: 2.5rem !important;
+        font-weight: bold !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .main-title p {
+        color: #ffffff !important;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7) !important;
+        font-size: 1.1rem !important;
+        margin: 0 !important;
+    }
+    
+    /* Alert boxes with glassmorphism */
+    .alert-danger {
+        background: rgba(255, 107, 107, 0.8) !important;
+        backdrop-filter: blur(10px) !important;
+        color: white !important;
+        padding: 20px !important;
+        border-radius: 15px !important;
+        margin: 15px 0 !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        box-shadow: 0 4px 16px rgba(255, 107, 107, 0.3) !important;
+    }
+    
+    .alert-success {
+        background: rgba(0, 210, 211, 0.8) !important;
+        backdrop-filter: blur(10px) !important;
+        color: white !important;
+        padding: 20px !important;
+        border-radius: 15px !important;
+        margin: 15px 0 !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        box-shadow: 0 4px 16px rgba(0, 210, 211, 0.3) !important;
+    }
+    
+    /* Style metrics and other elements */
+    div[data-testid="metric-container"] {
+        background: rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        padding: 1rem !important;
+        border-radius: 15px !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* Text areas and inputs styling */
+    .stTextInput > div > div > input,
+    .stTextArea > div > div > textarea {
+        background: rgba(255, 255, 255, 0.9) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border-radius: 10px !important;
+        backdrop-filter: blur(5px) !important;
+        color: #000000 !important;
+    }
+    
+    /* Expander styling */
+    .streamlit-expanderHeader {
+        background: rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(10px) !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    }
+    
+    /* Status badges enhancement */
+    .status-badge {
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: bold;
+        margin: 2px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Make sure main content text is readable */
+    .stMarkdown, .stText {
+        color: white !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+    }
+    
+    /* Chat messages styling */
+    .chat-message {
+        background: rgba(0, 0, 0, 0.7) !important;
+        color: white !important;
+        padding: 10px !important;
+        border-radius: 10px !important;
+        margin: 5px 0 !important;
+    }
+    
+    /* Tabs styling */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 24px;
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
+        color: white !important;
+        font-weight: bold;
+        padding: 10px 20px;
+    }
+    
+    .stTabs [aria-selected="true"] {
+        background: rgba(255, 255, 255, 0.4) !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 
 # Main content with tabs
 tab1, tab2, tab3, tab4 = st.tabs(["🚨 Disaster Monitor", "💬CrisisPilot: Command Chat Center", "🛡️Smart Survival Guide", "📊🔧Emergency Action Toolkit"])
