@@ -255,6 +255,63 @@ if st.sidebar.button("🔔Trigger Discord Alert"):
                     st.error("❌ Discord webhook not configured.")
     else:
         st.sidebar.error("Please enter your location first.")
+# Enhanced Discord Server Integration Section
+st.sidebar.divider()
+st.sidebar.header("🔗 Join Our Discord Server")
+
+# Discord server invitation section with enhanced styling
+st.sidebar.markdown("""
+<div class="discord-section">
+    <h4 style="color: white; text-align: center; margin-bottom: 15px;">💬 CrisisPilot Community</h4>
+    <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 14px;">
+        🚨 Get real-time alerts<br>
+        💬 Connect with the community<br>
+        🛡️ Share safety tips<br>
+        📊 Access exclusive updates
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
+# Enhanced instructions with better visibility
+st.sidebar.markdown("""
+**To join and receive alerts:**
+
+1. **Click the invite link below** 👇
+2. **Log in** to your Discord account
+3. **Accept** the server invitation
+4. **Navigate** to #alerts channel for updates
+5. **Enable** notifications for real-time alerts
+
+**Channels you'll find:**
+- 🚨 **#alerts** - Emergency notifications
+- 💬 **#general** - Community discussions
+- 🛡️ **#safety-tips** - Preparedness advice
+- 📊 **#updates** - System announcements
+""")
+
+# Discord invite link with enhanced button styling
+st.sidebar.markdown("""
+<div style="text-align: center; margin: 20px 0;">
+    <a href="https://discord.gg/your-invite-code" class="discord-link" target="_blank">
+        🎮 Join CrisisPilot Discord Server
+    </a>
+</div>
+""", unsafe_allow_html=True)
+
+# Enhanced Discord community status badge
+st.sidebar.markdown(
+    '<div class="status-badge" style="background: linear-gradient(45deg, #5865f2, #7289da); width: 100%; text-align: center; margin-top: 10px;">💬 CrisisPilot Community Ready</div>',
+    unsafe_allow_html=True
+)
+
+# Additional Discord information
+st.sidebar.markdown("""
+<div style="background: rgba(88, 101, 242, 0.2); padding: 15px; border-radius: 10px; margin-top: 15px; border: 1px solid rgba(255,255,255,0.2);">
+    <p style="color: white; font-size: 12px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); margin: 0;">
+        <strong>💡 Pro Tip:</strong> Enable Discord notifications on your mobile device to receive instant emergency alerts wherever you are!
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
 # Main content with tabs
 tab1, tab2, tab3, tab4 = st.tabs(["🚨 Disaster Monitor", "💬CrisisPilot: Command Chat Center", "🛡️Smart Survival Guide", "📊🔧Emergency Action Toolkit"])
@@ -697,45 +754,7 @@ else:
 
 st.sidebar.info(f"📍 **Current Location:** {user_location if user_location else 'Not set'}")
 st.sidebar.info("📢 🔔Powered by **Discord** for Instant Alerts")
-# Discord status indicator
-if os.getenv("DISCORD_WEBHOOK_URL"):
-    st.sidebar.markdown('<div class="status-badge" style="background: rgba(0, 210, 211, 0.8);">✅ Discord Ready</div>', unsafe_allow_html=True)
-else:
-    st.sidebar.markdown('<div class="status-badge" style="background: rgba(255, 107, 107, 0.8);">❌ Discord Not Configured</div>', unsafe_allow_html=True)
 
-st.sidebar.info(f"📍 **Current Location:** {user_location if user_location else 'Not set'}")
-st.sidebar.info("📢 🔔Powered by **Discord** for Instant Alerts")
-
-# ADD DISCORD INSTRUCTIONS HERE - NEW SECTION
-st.sidebar.divider()
-st.sidebar.header("🔗 Join Our Discord Server")
-
-# Informational box with invite instructions
-st.sidebar.markdown("""
-To receive real-time alerts and interact with the CrisisPilot community:
-
-1. Click the invite link below:
-   👉 [**Join CrisisPilot Discord Server**](https://discord.gg/your-invite-code)
-
-2. Log in to your Discord account (if not already).
-
-3. Accept the invitation and you'll be added to the server.
-
-4. Navigate to the **#alerts** or **#general** channel to see updates.
-""")
-
-# Optional visual badge or highlight
-st.sidebar.markdown(
-    '<div class="status-badge" style="background: rgba(88, 101, 242, 0.9); color: white;">💬 CrisisPilot Community Ready</div>',
-    unsafe_allow_html=True
-)
-# END OF NEW SECTION
-
-# Session info (existing code continues)
-st.sidebar.divider()
-st.sidebar.header("📊 Session Info")
-st.sidebar.info(f"Chat Messages: {len(st.session_state.chat_history)}")
-st.sidebar.info(f"Last Analysis: {'✅ Done' if st.session_state.last_analysis else '❌ None'}")
 # Session info
 st.sidebar.divider()
 st.sidebar.header("📊 Session Info")
