@@ -366,214 +366,35 @@ st.sidebar.markdown("""
 """, unsafe_allow_html=True)
 
 # Add this CSS to your existing style section to ensure sidebar text visibility
-# Replace your existing CSS section (around lines 30-300) with this improved version:
-
 st.markdown("""
 <style>
-    /* Main app background with gradient */
-    .stApp {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
-        background-size: 400% 400%;
-        animation: gradientShift 15s ease infinite;
-    }
-    
-    /* Animated gradient keyframes */
-    @keyframes gradientShift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-    
-    /* Main content container with semi-transparent background */
-    .main .block-container {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 2rem;
-        margin-top: 1rem;
-        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-    }
-    
-    /* Sidebar styling with gradient background */
-    .css-1d391kg, .css-1cypcdb, .sidebar .sidebar-content, section[data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%) !important;
-        backdrop-filter: blur(10px);
-        border-radius: 0 20px 20px 0;
-        border-right: 2px solid rgba(255, 255, 255, 0.3);
-    }
-    
-    /* FIXED: Sidebar text styling for better readability */
-    .sidebar .sidebar-content, 
-    section[data-testid="stSidebar"], 
-    section[data-testid="stSidebar"] * {
-        color: #000000 !important;
-    }
-    
-    /* FIXED: Ensure all sidebar text elements are visible */
-    section[data-testid="stSidebar"] h1,
-    section[data-testid="stSidebar"] h2,
-    section[data-testid="stSidebar"] h3,
-    section[data-testid="stSidebar"] h4,
+    /* Additional CSS for Discord section visibility */
+    .sidebar .sidebar-content p,
+    .sidebar .sidebar-content li,
+    .sidebar .sidebar-content ol,
+    .sidebar .sidebar-content ul,
     section[data-testid="stSidebar"] p,
     section[data-testid="stSidebar"] li,
     section[data-testid="stSidebar"] ol,
-    section[data-testid="stSidebar"] ul,
-    section[data-testid="stSidebar"] span,
-    section[data-testid="stSidebar"] div {
+    section[data-testid="stSidebar"] ul {
         color: #000000 !important;
         text-shadow: none !important;
     }
     
-    /* FIXED: Sidebar links visibility */
+    /* Ensure links are visible */
+    .sidebar .sidebar-content a,
     section[data-testid="stSidebar"] a {
         color: #0066cc !important;
         text-decoration: underline !important;
-        font-weight: bold !important;
     }
     
-    /* Make buttons more vibrant */
-    .stButton > button {
-        background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4) !important;
-        background-size: 300% 300%;
-        animation: gradientShift 3s ease infinite;
-        color: white !important;
-        border: none !important;
-        border-radius: 25px !important;
-        padding: 12px 24px !important;
-        font-weight: bold !important;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
-        transition: all 0.3s ease !important;
-    }
-    
-    .stButton > button:hover {
-        transform: translateY(-2px) !important;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.3) !important;
-    }
-    
-    /* FIXED: Enhanced main title with better color contrast */
-    .main-title {
-        background: rgba(0, 0, 0, 0.7) !important;
-        backdrop-filter: blur(15px) !important;
-        -webkit-backdrop-filter: blur(15px) !important;
-        border: 2px solid rgba(255, 255, 255, 0.3) !important;
-        padding: 30px !important;
-        border-radius: 20px !important;
-        color: #ffffff !important;
-        text-align: center !important;
-        margin-bottom: 30px !important;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
-    }
-    
-    /* FIXED: Make sure title text is always visible */
-    .main-title h1 {
-        color: #ffffff !important;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
-        font-size: 2.5rem !important;
-        font-weight: bold !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .main-title p {
-        color: #ffffff !important;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.7) !important;
-        font-size: 1.1rem !important;
-        margin: 0 !important;
-    }
-    
-    /* Alert boxes with glassmorphism */
-    .alert-danger {
-        background: rgba(255, 107, 107, 0.8) !important;
-        backdrop-filter: blur(10px) !important;
-        color: white !important;
-        padding: 20px !important;
-        border-radius: 15px !important;
-        margin: 15px 0 !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
-        box-shadow: 0 4px 16px rgba(255, 107, 107, 0.3) !important;
-    }
-    
-    .alert-success {
-        background: rgba(0, 210, 211, 0.8) !important;
-        backdrop-filter: blur(10px) !important;
-        color: white !important;
-        padding: 20px !important;
-        border-radius: 15px !important;
-        margin: 15px 0 !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
-        box-shadow: 0 4px 16px rgba(0, 210, 211, 0.3) !important;
-    }
-    
-    /* Style metrics and other elements */
-    div[data-testid="metric-container"] {
-        background: rgba(255, 255, 255, 0.1) !important;
-        backdrop-filter: blur(10px) !important;
-        border: 1px solid rgba(255, 255, 255, 0.18) !important;
-        padding: 1rem !important;
-        border-radius: 15px !important;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
-    }
-    
-    /* Text areas and inputs styling */
-    .stTextInput > div > div > input,
-    .stTextArea > div > div > textarea {
-        background: rgba(255, 255, 255, 0.9) !important;
-        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    /* Discord section specific styling */
+    .discord-section {
+        background: rgba(88, 101, 242, 0.1) !important;
+        padding: 15px !important;
         border-radius: 10px !important;
-        backdrop-filter: blur(5px) !important;
-        color: #000000 !important;
-    }
-    
-    /* Expander styling */
-    .streamlit-expanderHeader {
-        background: rgba(255, 255, 255, 0.1) !important;
-        backdrop-filter: blur(10px) !important;
-        border-radius: 10px !important;
-        border: 1px solid rgba(255, 255, 255, 0.18) !important;
-    }
-    
-    /* Status badges enhancement */
-    .status-badge {
-        display: inline-block;
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-weight: bold;
-        margin: 2px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Make sure main content text is readable */
-    .stMarkdown, .stText {
-        color: white !important;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
-    }
-    
-    /* Chat messages styling */
-    .chat-message {
-        background: rgba(0, 0, 0, 0.7) !important;
-        color: white !important;
-        padding: 10px !important;
-        border-radius: 10px !important;
-        margin: 5px 0 !important;
-    }
-    
-    /* Tabs styling */
-    .stTabs [data-baseweb="tab-list"] {
-        gap: 24px;
-    }
-    
-    .stTabs [data-baseweb="tab"] {
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 15px;
-        color: white !important;
-        font-weight: bold;
-        padding: 10px 20px;
-    }
-    
-    .stTabs [aria-selected="true"] {
-        background: rgba(255, 255, 255, 0.4) !important;
+        margin: 10px 0 !important;
+        border: 2px solid rgba(88, 101, 242, 0.3) !important;
     }
 </style>
 """, unsafe_allow_html=True)
