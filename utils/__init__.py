@@ -1,5 +1,5 @@
 """
-Utils package for ReDAC - Real-Time Disaster Aid Coordinator
+Utils package for CrisisPilot: Global Disaster Swift Response Assistant
 
 This package contains utility modules for:
 - templates.py: LangChain prompt templates

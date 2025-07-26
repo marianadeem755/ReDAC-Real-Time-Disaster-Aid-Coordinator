@@ -43,7 +43,7 @@ class AlertSender:
         try:
             payload = {
                 "content": message,
-                "username": "ReDAC Alert Bot",
+                "username": "CrisisPilot • Critical Alert System",
                 "avatar_url": "https://cdn-icons-png.flaticon.com/512/564/564619.png"
             }
             
@@ -73,5 +73,5 @@ class AlertSender:
 
     def test_connection(self) -> bool:
         """Test if the alert system is working"""
-        test_message = "🧪 ReDAC Alert System Test - System is working!"
+        test_message = "🧪 Automated System Test – Operational integrity confirmed! ✅"
         return self.send_discord_alert(test_message)

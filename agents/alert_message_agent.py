@@ -128,19 +128,19 @@ IMMEDIATE ACTIONS:
 • Monitor official communications
 • Contact emergency services if needed
 
-⚠️ This is an automated alert from ReDAC Emergency System
+⚠️ This is an automated alert from CrisisPilot – Global Disaster Swift Response Assistant.
 Stay safe and follow official emergency protocols.
         """.strip()
     
     def generate_test_alert(self) -> str:
         """Generate a test alert message"""
         return """
-🧪 REDAC SYSTEM TEST 🧪
+🧪 CrisisPilot: Global Disaster Response – System Test Mode 🧪
 
 ALERT SYSTEM STATUS: ✅ OPERATIONAL
 TEST TIME: """ + datetime.now().strftime("%Y-%m-%d %H:%M:%S") + """
 
-This is a test of the ReDAC Emergency Alert System.
+This is a test of the  CrisisPilot Emergency Alert System.
 - All systems are functioning correctly
 - Alert delivery confirmed
 - Ready for emergency monitoring
@@ -152,7 +152,7 @@ If this was a real emergency, you would receive:
 • Recommended safety actions
 • Emergency contact information
 
-📱 ReDAC - Real-Time Disaster Aid Coordinator
+📱  CrisisPilot: Global Disaster Swift Response Assistant
 Your AI-powered emergency monitoring system is active.
         """.strip()
     
@@ -177,5 +177,5 @@ RECOMMENDATIONS:
 • Review family emergency plan
 • Check back regularly for updates
 
-🛡️ ReDAC continues monitoring for your safety.
+🛡️ CrisisPilot: Global Disaster Swift Response Assistant continues monitoring for your safety.
         """.strip()
