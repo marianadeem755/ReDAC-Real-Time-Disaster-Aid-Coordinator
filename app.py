@@ -1,4 +1,3 @@
-in side bar i have also add tehse instruction by foolowing same code
 import streamlit as st
 import time
 import os
@@ -698,8 +697,16 @@ else:
 
 st.sidebar.info(f"📍 **Current Location:** {user_location if user_location else 'Not set'}")
 st.sidebar.info("📢 🔔Powered by **Discord** for Instant Alerts")
+# Discord status indicator
+if os.getenv("DISCORD_WEBHOOK_URL"):
+    st.sidebar.markdown('<div class="status-badge" style="background: rgba(0, 210, 211, 0.8);">✅ Discord Ready</div>', unsafe_allow_html=True)
+else:
+    st.sidebar.markdown('<div class="status-badge" style="background: rgba(255, 107, 107, 0.8);">❌ Discord Not Configured</div>', unsafe_allow_html=True)
 
-# Divider for Discord join section
+st.sidebar.info(f"📍 **Current Location:** {user_location if user_location else 'Not set'}")
+st.sidebar.info("📢 🔔Powered by **Discord** for Instant Alerts")
+
+# ADD DISCORD INSTRUCTIONS HERE - NEW SECTION
 st.sidebar.divider()
 st.sidebar.header("🔗 Join Our Discord Server")
 
@@ -712,7 +719,7 @@ To receive real-time alerts and interact with the CrisisPilot community:
 
 2. Log in to your Discord account (if not already).
 
-3. Accept the invitation and you’ll be added to the server.
+3. Accept the invitation and you'll be added to the server.
 
 4. Navigate to the **#alerts** or **#general** channel to see updates.
 """)
@@ -722,3 +729,15 @@ st.sidebar.markdown(
     '<div class="status-badge" style="background: rgba(88, 101, 242, 0.9); color: white;">💬 CrisisPilot Community Ready</div>',
     unsafe_allow_html=True
 )
+# END OF NEW SECTION
+
+# Session info (existing code continues)
+st.sidebar.divider()
+st.sidebar.header("📊 Session Info")
+st.sidebar.info(f"Chat Messages: {len(st.session_state.chat_history)}")
+st.sidebar.info(f"Last Analysis: {'✅ Done' if st.session_state.last_analysis else '❌ None'}")
+# Session info
+st.sidebar.divider()
+st.sidebar.header("📊 Session Info")
+st.sidebar.info(f"Chat Messages: {len(st.session_state.chat_history)}")
+st.sidebar.info(f"Last Analysis: {'✅ Done' if st.session_state.last_analysis else '❌ None'}")
