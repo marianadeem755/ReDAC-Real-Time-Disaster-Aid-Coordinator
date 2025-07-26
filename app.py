@@ -699,20 +699,26 @@ else:
 st.sidebar.info(f"📍 **Current Location:** {user_location if user_location else 'Not set'}")
 st.sidebar.info("📢 🔔Powered by **Discord** for Instant Alerts")
 
-# Session info
+# Divider for Discord join section
 st.sidebar.divider()
-st.sidebar.header("📊 Session Info")
-st.sidebar.info(f"Chat Messages: {len(st.session_state.chat_history)}")
-st.sidebar.info(f"Last Analysis: {'✅ Done' if st.session_state.last_analysis else '❌ None'}")
-## 🔗 Join Our Discord Server 
+st.sidebar.header("🔗 Join Our Discord Server")
 
+# Informational box with invite instructions
+st.sidebar.markdown("""
 To receive real-time alerts and interact with the CrisisPilot community:
 
 1. Click the invite link below:
-   👉 [Join CrisisPilot Discord Server](https://discord.gg/your-invite-code)
+   👉 [**Join CrisisPilot Discord Server**](https://discord.gg/your-invite-code)
 
 2. Log in to your Discord account (if not already).
 
 3. Accept the invitation and you’ll be added to the server.
 
 4. Navigate to the **#alerts** or **#general** channel to see updates.
+""")
+
+# Optional visual badge or highlight
+st.sidebar.markdown(
+    '<div class="status-badge" style="background: rgba(88, 101, 242, 0.9); color: white;">💬 CrisisPilot Community Ready</div>',
+    unsafe_allow_html=True
+)
