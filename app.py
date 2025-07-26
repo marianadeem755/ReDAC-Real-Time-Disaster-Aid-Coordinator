@@ -232,7 +232,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Sidebar
+# Sidebar - Complete section with Discord integration
 st.sidebar.header("🔮 System Portal")
 user_location = st.sidebar.text_input(
     "📍Enter Your Location Here:", 
@@ -255,15 +255,16 @@ if st.sidebar.button("🔔Trigger Discord Alert"):
                     st.error("❌ Discord webhook not configured.")
     else:
         st.sidebar.error("Please enter your location first.")
+
 # Enhanced Discord Server Integration Section
 st.sidebar.divider()
 st.sidebar.header("🔗 Join Our Discord Server")
 
 # Discord server invitation section with enhanced styling
 st.sidebar.markdown("""
-<div class="discord-section">
-    <h4 style="color: white; text-align: center; margin-bottom: 15px;">💬 CrisisPilot Community</h4>
-    <p style="color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-size: 14px;">
+<div style="background: rgba(88, 101, 242, 0.15); padding: 15px; border-radius: 15px; margin: 10px 0; border: 2px solid rgba(88, 101, 242, 0.3);">
+    <h4 style="color: #000000 !important; text-align: center; margin-bottom: 15px; font-weight: bold; text-shadow: none;">💬 CrisisPilot Community</h4>
+    <p style="color: #000000 !important; text-shadow: none; font-size: 14px; line-height: 1.4; margin: 0;">
         🚨 Get real-time alerts<br>
         💬 Connect with the community<br>
         🛡️ Share safety tips<br>
@@ -274,44 +275,114 @@ st.sidebar.markdown("""
 
 # Enhanced instructions with better visibility
 st.sidebar.markdown("""
-**To join and receive alerts:**
+<div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px; margin: 10px 0; border: 1px solid rgba(0, 0, 0, 0.1);">
+<p style="color: #000000 !important; font-weight: bold; margin-bottom: 10px; text-shadow: none;">To join and receive alerts:</p>
 
-1. **Click the invite link below** 👇
-2. **Log in** to your Discord account
-3. **Accept** the server invitation
-4. **Navigate** to #alerts channel for updates
-5. **Enable** notifications for real-time alerts
+<ol style="color: #000000 !important; text-shadow: none; padding-left: 20px;">
+<li><strong>Click the invite link below</strong> 👇</li>
+<li><strong>Log in</strong> to your Discord account</li>
+<li><strong>Accept</strong> the server invitation</li>
+<li><strong>Navigate</strong> to #alerts channel for updates</li>
+<li><strong>Enable</strong> notifications for real-time alerts</li>
+</ol>
 
-**Channels you'll find:**
-- 🚨 **#alerts** - Emergency notifications
-- 💬 **#general** - Community discussions
-- 🛡️ **#safety-tips** - Preparedness advice
-- 📊 **#updates** - System announcements
-""")
+<p style="color: #000000 !important; font-weight: bold; margin: 15px 0 10px 0; text-shadow: none;">Channels you'll find:</p>
+<ul style="color: #000000 !important; text-shadow: none; padding-left: 20px;">
+<li>🚨 <strong>#alerts</strong> - Emergency notifications</li>
+<li>💬 <strong>#general</strong> - Community discussions</li>
+<li>🛡️ <strong>#safety-tips</strong> - Preparedness advice</li>
+<li>📊 <strong>#updates</strong> - System announcements</li>
+</ul>
+</div>
+""", unsafe_allow_html=True)
 
-# Discord invite link with enhanced button styling
+# Discord invite button with enhanced styling
 st.sidebar.markdown("""
 <div style="text-align: center; margin: 20px 0;">
-    <a href="https://discord.gg/your-invite-code" class="discord-link" target="_blank">
+    <a href="https://discord.gg/uHMmJ9T9hz" 
+       style="display: inline-block; 
+              background: linear-gradient(45deg, #aab3ff, #c0ccff);
+              color: white !important; 
+              padding: 12px 20px; 
+              text-decoration: none; 
+              border-radius: 25px; 
+              font-weight: bold; 
+              font-size: 18px;
+              box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+              transition: all 0.3s ease;"
+       onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(88, 101, 242, 0.4)'"
+       onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 4px 15px rgba(88, 101, 242, 0.3)'"
+       target="_blank">
         🎮 Join CrisisPilot Discord Server
     </a>
 </div>
 """, unsafe_allow_html=True)
 
 # Enhanced Discord community status badge
-st.sidebar.markdown(
-    '<div class="status-badge" style="background: linear-gradient(45deg, #5865f2, #7289da); width: 100%; text-align: center; margin-top: 10px;">💬 CrisisPilot Community Ready</div>',
-    unsafe_allow_html=True
-)
-
-# Additional Discord information
 st.sidebar.markdown("""
-<div style="background: rgba(88, 101, 242, 0.2); padding: 15px; border-radius: 10px; margin-top: 15px; border: 1px solid rgba(255,255,255,0.2);">
-    <p style="color: white; font-size: 12px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); margin: 0;">
+<div style="background: linear-gradient(45deg, #5865f2, #7289da); 
+           color: white; 
+           padding: 10px; 
+           text-align: center; 
+           border-radius: 20px; 
+           margin: 15px 0;
+           font-weight: bold;
+           box-shadow: 0 2px 8px rgba(88, 101, 242, 0.3);">
+    💬 CrisisPilot Community Ready
+</div>
+""", unsafe_allow_html=True)
+
+# Additional Discord information with better styling
+st.sidebar.markdown("""
+<div style="background: rgba(88, 101, 242, 0.1); 
+           padding: 15px; 
+           border-radius: 10px; 
+           margin: 15px 0; 
+           border: 1px solid rgba(88, 101, 242, 0.2);">
+    <p style="color: #000000 !important; 
+              font-size: 12px; 
+              text-shadow: none; 
+              margin: 0;
+              line-height: 1.4;">
         <strong>💡 Pro Tip:</strong> Enable Discord notifications on your mobile device to receive instant emergency alerts wherever you are!
     </p>
 </div>
 """, unsafe_allow_html=True)
+
+# Add this CSS to your existing style section to ensure sidebar text visibility
+st.markdown("""
+<style>
+    /* Additional CSS for Discord section visibility */
+    .sidebar .sidebar-content p,
+    .sidebar .sidebar-content li,
+    .sidebar .sidebar-content ol,
+    .sidebar .sidebar-content ul,
+    section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] li,
+    section[data-testid="stSidebar"] ol,
+    section[data-testid="stSidebar"] ul {
+        color: #000000 !important;
+        text-shadow: none !important;
+    }
+    
+    /* Ensure links are visible */
+    .sidebar .sidebar-content a,
+    section[data-testid="stSidebar"] a {
+        color: #0066cc !important;
+        text-decoration: underline !important;
+    }
+    
+    /* Discord section specific styling */
+    .discord-section {
+        background: rgba(88, 101, 242, 0.1) !important;
+        padding: 15px !important;
+        border-radius: 10px !important;
+        margin: 10px 0 !important;
+        border: 2px solid rgba(88, 101, 242, 0.3) !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 
 # Main content with tabs
 tab1, tab2, tab3, tab4 = st.tabs(["🚨 Disaster Monitor", "💬CrisisPilot: Command Chat Center", "🛡️Smart Survival Guide", "📊🔧Emergency Action Toolkit"])
