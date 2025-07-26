@@ -85,18 +85,25 @@ st.markdown("""
     
     /* Enhanced main title with glassmorphism effect */
     .main-title {
-        background: rgba(255, 255, 255, 0.25) !important;
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-        border: 1px solid rgba(255, 255, 255, 0.18) !important;
-        padding: 30px !important;
-        border-radius: 20px !important;
-        color: black !important;
-        text-align: center !important;
-        margin-bottom: 30px !important;
-        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37) !important;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    padding: 30px !important;
+    border-radius: 20px !important;
+    color: black !important;
+    text-align: center !important;
+    margin-bottom: 30px !important;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37) !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
     }
+    .main-title p {
+        color: white !important;
+        font-size: 18px;
+        margin-top: 10px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    }
+
     
     /* Alert boxes with glassmorphism */
     .alert-danger {
