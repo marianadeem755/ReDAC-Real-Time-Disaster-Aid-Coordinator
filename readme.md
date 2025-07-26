@@ -1,6 +1,6 @@
 # 🚨 CrisisPilot: Global Disaster Swift Response Assistant
 
-**Developed by [Your Company Name]**
+**Developed by Beacon Builders**
 
 An AI-powered disaster monitoring and alert system that monitors global news, analyzes potential threats, and sends instant Discord alerts to keep communities informed and safe during emergencies.
 
