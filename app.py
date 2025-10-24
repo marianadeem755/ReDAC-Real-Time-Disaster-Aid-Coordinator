@@ -8,7 +8,8 @@ from agents.alert_message_agent import AlertMessageAgent
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="CrisisPilot: Global Disaster Swift Response Assistant",
+    page_title="ReDAC: Real Time Disaster Aid Coordinator
+",
     page_icon="🚨",
     layout="wide"
 )
@@ -234,7 +235,7 @@ agents = initialize_agents()
 # Main UI
 st.markdown("""
 <div class="main-title">
-    <h1>🚨 CrisisPilot: Global Disaster Swift Response Assistant</h1>
+    <h1>🚨 Re: Global Disaster Swift Response Assistant</h1>
     <p>An AI-powered assistant for real-time disaster detection and response — accelerating relief, reducing impact, and saving lives through smart alerts and coordination.</p>
 </div>
 """, unsafe_allow_html=True)
@@ -270,7 +271,7 @@ st.sidebar.header("🔗 Join Our Discord Server")
 # Discord server invitation section with enhanced styling
 st.sidebar.markdown("""
 <div style="background: rgba(88, 101, 242, 0.15); padding: 15px; border-radius: 15px; margin: 10px 0; border: 2px solid rgba(88, 101, 242, 0.3);">
-    <h4 style="color: #000000 !important; text-align: center; margin-bottom: 15px; font-weight: bold; text-shadow: none;">💬 CrisisPilot Community</h4>
+    <h4 style="color: #000000 !important; text-align: center; margin-bottom: 15px; font-weight: bold; text-shadow: none;">💬 ReDAC Community</h4>
     <p style="color: #000000 !important; text-shadow: none; font-size: 14px; line-height: 1.4; margin: 0;">
         🚨 Get real-time alerts<br>
         💬 Connect with the community<br>
@@ -320,7 +321,7 @@ st.sidebar.markdown("""
        onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(88, 101, 242, 0.4)'"
        onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 4px 15px rgba(88, 101, 242, 0.3)'"
        target="_blank">
-        🎮 Join CrisisPilot Discord Server
+        🎮 Join Discord Server
     </a>
 </div>
 """, unsafe_allow_html=True)
@@ -335,7 +336,7 @@ st.sidebar.markdown("""
            margin: 15px 0;
            font-weight: bold;
            box-shadow: 0 2px 8px rgba(88, 101, 242, 0.3);">
-    💬 CrisisPilot Community Ready
+    💬 ReDAC Community Ready
 </div>
 """, unsafe_allow_html=True)
 
@@ -408,10 +409,10 @@ st.markdown("""
 
 
 # Main content with tabs
-tab1, tab2, tab3, tab4 = st.tabs(["🚨 Disaster Monitor", "💬CrisisPilot: Command Chat Center", "🛡️Smart Survival Guide", "📊🔧Emergency Action Toolkit"])
+tab1, tab2, tab3, tab4 = st.tabs(["🚨 Disaster Monitor", "💬ReDAC: Command Chat Center", "🛡️Smart Survival Guide", "📊🔧Emergency Action Toolkit"])
 
 with tab1:
-    st.header("📰📡CrisisPilot: Global Threat Monitor")
+    st.header("📰📡ReDAC: Global Threat Monitor")
     
     if st.button("🔍 Check for Disasters", type="primary"):
         if not user_location:
@@ -478,7 +479,7 @@ with tab2:
             if message['role'] == 'user':
                 st.markdown(f'<div class="chat-message" style="background: rgba(0, 123, 255, 0.7);">**👤 You:** {message["content"]}</div>', unsafe_allow_html=True)
             else:
-                st.markdown(f'<div class="chat-message" style="background: rgba(0, 200, 0, 0.7);">**🤖 CrisisPilot:** {message["content"]}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="chat-message" style="background: rgba(0, 200, 0, 0.7);">**🤖 ReDAC:** {message["content"]}</div>', unsafe_allow_html=True)
     else:
         st.info("👋 Hello! I'm your AI disaster assistant. Ask me about disasters, safety tips, or emergency preparedness.")
     
@@ -542,7 +543,7 @@ with tab2:
                 st.rerun()
 
 with tab3:
-    st.header("🆘 CrisisPilot: Life-Saving Instructions")
+    st.header("🆘 ReDAC: Life-Saving Instructions")
     
     disaster_type = st.selectbox(
         "Select Disaster Type:", 
@@ -601,7 +602,7 @@ with tab4:
         st.progress(progress, text=f"Kit Completion: {int(progress * 100)}%")
     
     with col2:
-        st.markdown("### 🏠📦Crisis-Ready Home Setup")
+        st.markdown("### 🏠📦ReDAC-Ready Home Setup")
         home_prep_items = [
             "Create family emergency plan",
             "Identify safe spots in each room",
@@ -807,11 +808,11 @@ with tab4:
 
 # Footer
 st.divider()
-st.markdown("### 🔧 How CrisisPilot Works")
+st.markdown("### 🔧 How ReDAC Works")
 
 with st.expander("Click to learn about the technology"):
     st.markdown("""
-    **CrisisPilot uses several AI components working together:**
+    **ReDAC uses several AI components working together:**
     
     1. **News Agent** 🕵️ - Searches for disaster-related news using Serper API
     2. **Alert Agent** 🚨 - Analyzes news with Groq AI and sends alerts to Discord
