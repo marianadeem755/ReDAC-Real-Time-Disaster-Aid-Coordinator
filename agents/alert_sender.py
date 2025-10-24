@@ -50,7 +50,7 @@ class AlertSender:
         
         payload = {
             "content": message,
-            "username": "CrisisPilot • Critical Alert System",
+            "username": "ReDAC • Critical Alert System",
             "avatar_url": "https://cdn-icons-png.flaticon.com/512/564/564619.png"
         }
         
@@ -65,7 +65,7 @@ class AlertSender:
                     json=payload, 
                     timeout=15,
                     headers={
-                        'User-Agent': 'CrisisPilot-CriticalAlert-Bot/1.0',
+                        'User-Agent': 'ReDAC-CriticalAlert-Bot/1.0',
                         'Content-Type': 'application/json'
                     }
                 )
