@@ -1,12 +1,12 @@
-# 🚨 CrisisPilot: Global Disaster Swift Response Assistant
+# 🚨 ReDAC-Real-Time-Disaster-Aid-Coordinator
 
 **Developed by Beacon Builders**
 
 An AI-powered disaster monitoring and alert system that monitors global news, analyzes potential threats, and sends instant Discord alerts to keep communities informed and safe during emergencies.
 
-## 🎯 What is CrisisPilot?
+## 🎯 What is ReDAC?
 
-CrisisPilot is an intelligent disaster response assistant that:
+ReDAC is an intelligent disaster response assistant that:
 - **Monitors global news** for disasters and emergencies in real-time
 - **Analyzes threats** using advanced AI to assess risk levels
 - **Sends instant Discord alerts** to notify your community of potential dangers
@@ -15,7 +15,7 @@ CrisisPilot is an intelligent disaster response assistant that:
 ## 🏗️ Project Structure
 
 ```
-CrisisPilot/
+ReDAC/
 ├── app.py                      # Main Streamlit application interface
 ├── config.py                   # Configuration and settings management
 ├── requirements.txt            # Python package dependencies
@@ -48,8 +48,8 @@ CrisisPilot/
 
 ### Step 1: Clone and Install
 ```bash
-git clone [your-repository-url]
-cd CrisisPilot
+git clone https://github.com/marianadeem755/ReDAC-Real-Time-Disaster-Aid-Coordinator
+cd ReDAC
 pip install -r requirements.txt
 ```
 
@@ -88,14 +88,14 @@ SERPER_API_KEY=your_serper_api_key_here
 DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/your_webhook_url_here
 ```
 
-### Step 4: Run CrisisPilot
+### Step 4: Run ReDAC
 ```bash
 streamlit run app.py
 ```
 
 The application will open in your web browser at `http://localhost:8501`
 
-## 🎮 How to Use CrisisPilot
+## 🎮 How to Use ReDAC
 
 ### 1. Initial Setup
 - Enter your location (city, state, country) in the sidebar
@@ -122,10 +122,10 @@ The application will open in your web browser at `http://localhost:8501`
 ## 📱 Discord Integration
 
 ### Alert Format
-CrisisPilot sends structured alerts to your Discord channel:
+ReDAC sends structured alerts to your Discord channel:
 
 ```
-🚨 CRISIS PILOT ALERT 🚨
+🚨 ReDAC 🚨
 
 📍 Location: [Your Area]
 ⚠️  Threat Type: [Earthquake/Flood/Storm/etc.]
@@ -142,7 +142,7 @@ Stay safe and follow local authorities' guidance!
 ### Test Alert
 The system includes a test function that sends:
 ```
-🧪 CRISIS PILOT TEST ALERT 🧪
+🧪 ReDAC TEST ALERT 🧪
 Alert system is operational and ready to protect your community!
 ```
 
@@ -191,7 +191,7 @@ python test_alerts.py
 - Verify API key permissions and limits
 
 ### Mock Data Mode
-If Serper API is unavailable, CrisisPilot automatically uses realistic mock data for testing and development.
+If Serper API is unavailable, ReDAC automatically uses realistic mock data for testing and development.
 
 ## 🚨 Emergency Response Features
 
@@ -269,12 +269,7 @@ pip install -r requirements.txt
 1. Check the troubleshooting section above
 2. Review error messages in the console
 3. Test individual components using provided test scripts
-4. Contact support team for technical assistance
-
-## 📄 License and Legal
-
-### Open Source License
-This project is released under [Your License Choice] license. See LICENSE file for details.
+4. Contact support team for technical assistanc
 
 ### Data Privacy
 - No personal data is stored permanently
@@ -282,33 +277,19 @@ This project is released under [Your License Choice] license. See LICENSE file f
 - News data is processed temporarily for analysis only
 
 ### Disclaimer
-CrisisPilot is a supplementary alert system. Always follow official emergency services and local authorities for definitive emergency guidance.
+ReDAC is a supplementary alert system. Always follow official emergency services and local authorities for definitive emergency guidance.
 
 ## 🤝 Contributing
 
-We welcome contributions to improve CrisisPilot:
+We welcome contributions to improve ReDAC:
 1. Fork the repository
 2. Create a feature branch
 3. Submit a pull request with detailed description
 
 ### Development Setup
 ```bash
-git clone [repository-url]
-cd CrisisPilot
+git clone https://github.com/marianadeem755/ReDAC-Real-Time-Disaster-Aid-Coordinator
+cd ReDAC
 pip install -r requirements.txt
 pip install -r requirements-dev.txt  # Development dependencies
 ```
-
-## 📞 Support and Contact
-
-- **Technical Support**: [your-support-email]
-- **Documentation**: [your-docs-url]
-- **Bug Reports**: [your-issues-url]
-- **Feature Requests**: [your-feature-requests-url]
-
----
-
-**🏢 Developed by [Your Company Name]**
-**🌍 Protecting communities worldwide through intelligent disaster response**
-
-**🔧 Built with Python 🐍 • LangChain 🧠 • Streamlit ⚡ • Discord Webhooks 🔔**
