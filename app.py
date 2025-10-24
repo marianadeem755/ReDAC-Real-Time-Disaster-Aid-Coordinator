@@ -234,7 +234,7 @@ agents = initialize_agents()
 # Main UI
 st.markdown("""
 <div class="main-title">
-    <h1>🚨 Re: Global Disaster Swift Response Assistant</h1>
+    <h1>🚨 ReDAC: Global Disaster Swift Response Assistant</h1>
     <p>An AI-powered assistant for real-time disaster detection and response — accelerating relief, reducing impact, and saving lives through smart alerts and coordination.</p>
 </div>
 """, unsafe_allow_html=True)
