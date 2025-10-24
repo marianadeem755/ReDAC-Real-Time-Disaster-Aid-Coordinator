@@ -1,4 +1,4 @@
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 
 # TEMPLATE: Instructions for the AI (like a fill-in-the-blank form)
 # This template tells the AI how to analyze news for disasters
