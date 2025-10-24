@@ -8,7 +8,7 @@ from agents.alert_message_agent import AlertMessageAgent
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="ReDAC: Real Time Disaster Aid Coordinator
+    page_title="ReDAC: Real Time Disaster Aid Coordinator"
 ",
     page_icon="🚨",
     layout="wide"
