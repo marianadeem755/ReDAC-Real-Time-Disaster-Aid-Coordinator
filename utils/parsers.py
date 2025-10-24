@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from langchain.output_parsers import PydanticOutputParser
+from langchain_core.output_parsers import PydanticOutputParser
 from typing import Optional
 
 # PARSER: Structures the AI's response into organized data
